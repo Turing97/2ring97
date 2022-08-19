@@ -2,25 +2,26 @@ import Home from "./views/Home";
 import About from "./views/About";
 import PostLists from "./views/PostLists";
 import Post from "./views/Post";
+import React from "react";
 export const route = [
   {
     path: "/",
     name: "home",
-    element: Home(),
+    element: <Home/>,
   },
   {
     path: "/about",
     name: "about",
-    element: About(),
+    element: <About/>,
   },
   {
     path: "/posts",
     name: "posts",
-    element: PostLists(),
+    element: <PostLists/>,
     children:[{
-      path: "/posts/:slug",
+      path: ":slug",
       name: "post",
-      element: Post(),
+      element: <Post/>,
     }]
   }
 ];                                                                       

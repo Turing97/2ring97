@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
 function PostLists() {
-
     const BlogPosts = {
       "1": {
         title: "第一篇博客文章",

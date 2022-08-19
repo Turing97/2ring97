@@ -1,8 +1,11 @@
 import React from "react";
+import { useParams } from "react-router";
 
 
 
 function Post() {
+  const { slug } = useParams()
+  console.log(slug)
   const BlogPosts = {
     "1": {
       title: "react",
@@ -13,8 +16,7 @@ function Post() {
       description: "vue"
     }
   };
-  
-  const post = BlogPosts[1];
+  const post = BlogPosts[slug] || {title:'',description:'1231'};
   const { title, description } = post;
   return (
     <div style={{ padding: 20 }}>
@@ -25,7 +27,3 @@ function Post() {
   );
 }
 export default Post;
-
-
-
-``43]
