@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route, Link, useParams, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import { route } from './route';
 
 
