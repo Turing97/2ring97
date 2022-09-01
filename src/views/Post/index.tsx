@@ -1,8 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 
 
 function Post() {
+  const {slug} = useParams()
   const BlogPosts = {
     "1": {
       title: "react",
@@ -12,15 +14,11 @@ function Post() {
       title: "vue",
       description: "vue"
     },
-    undefined:{
-      title: "vue",
-      description: "vue"
-    }
+
   };
-  const { title, description } = BlogPosts['1'];
+  const { title, description } = BlogPosts[slug as keyof typeof BlogPosts];
   return (
     <div style={{ padding: 20 }}>
-      <div>1232</div>
       <h3>{title}</h3>
       <p>{description}</p>
       <div></div>

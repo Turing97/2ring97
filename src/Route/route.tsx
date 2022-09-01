@@ -1,8 +1,10 @@
-import Home from "./views/Home";
-import About from "./views/About";
-import PostLists from "./views/PostLists";
-import Post from "./views/Post";
+
 import React from "react";
+import About from "../views/About";
+import Post from "../views/Post";
+import PostLists from "../views/PostLists";
+import Home from "../views/Home";
+
 export const route = [
   {
     path: "/",
